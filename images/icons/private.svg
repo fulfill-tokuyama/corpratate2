@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/100" viewBox="0 0 100 100" fill="#B76E79">
+  <rect x="20" y="30" width="60" height="40" rx="5" fill="none" stroke="#B76E79" stroke-width="3"/>
+  <rect x="25" y="35" width="50" height="30" rx="3" fill="#F5F5F0"/>
+  <circle cx="40" cy="45" r="3" fill="#B76E79"/>
+  <rect x="48" y="42" width="20" height="6" rx="1" fill="#B76E79"/>
+  <rect x="30" y="55" width="40" height="2" fill="#E5E5E5"/>
+  <rect x="30" y="60" width="25" height="2" fill="#E5E5E5"/>
+  <path d="M50 20c-8 0-15 7-15 15h30c0-8-7-15-15-15z" fill="#B76E79"/>
+  <circle cx="50" cy="25" r="3" fill="white"/>
+  <text x="50" y="95" text-anchor="middle" font-family="Arial" font-size="8" fill="#B76E79">プライベート</text>
+</svg> 
