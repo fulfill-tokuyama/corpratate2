@@ -1,0 +1,374 @@
+/* 管理者用スタイル */
+:root {
+    /* カラーパレット */
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    
+    /* フォント */
+    --font-family: 'Noto Sans JP', sans-serif;
+    
+    /* スペーシング */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* ボーダー */
+    --border-radius: 4px;
+    --border-color: #ddd;
+    
+    /* シャドウ */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* レイアウト */
+.admin-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background-color: var(--light-color);
+}
+
+/* サイドバー */
+.admin-sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-lg);
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.admin-sidebar-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.admin-sidebar-header h1 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.admin-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-nav-item {
+    margin-bottom: var(--spacing-sm);
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* メインコンテンツ */
+.admin-main {
+    margin-left: 250px;
+    padding: var(--spacing-xl);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.admin-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+/* カード */
+.admin-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.admin-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.admin-card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+}
+
+/* テーブル */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-lg);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background-color: var(--light-color);
+    font-weight: 600;
+}
+
+.admin-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ボタン */
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.admin-btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.admin-btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.admin-btn-warning {
+    background-color: var(--warning-color);
+    color: var(--dark-color);
+}
+
+.admin-btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.admin-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-btn:active {
+    transform: translateY(0);
+}
+
+/* アラート */
+.alert {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    animation: slideIn 0.3s ease-out;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* アニメーション */
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .admin-container {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        display: none;
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* ローディング状態 */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.admin-main {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* アクセシビリティ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* フォーカススタイル */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+        --bg-color: #1a1a1a;
+        --border-color: #333;
+    }
+
+    .admin-header,
+    .admin-nav,
+    .stat-card,
+    .dashboard-charts {
+        background-color: #2d2d2d;
+    }
+
+    th {
+        background-color: #333;
+    }
+
+    .alert-error {
+        background-color: rgba(244, 67, 54, 0.1);
+    }
+
+    .alert-success {
+        background-color: rgba(76, 175, 80, 0.1);
+    }
+} 

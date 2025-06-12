@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- ハートのシンボル -->
+    <path d="M40 65C40 65 60 50 60 35C60 25 50 20 40 30C30 20 20 25 20 35C20 50 40 65 40 65Z" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 電話のシンボル -->
+    <path d="M45 15H35C33.3431 15 32 16.3431 32 18V22C32 23.6569 33.3431 25 35 25H45C46.6569 25 48 23.6569 48 22V18C48 16.3431 46.6569 15 45 15Z" stroke="#333" stroke-width="2" fill="none"/>
+    <line x1="40" y1="25" x2="40" y2="30" stroke="#333" stroke-width="2"/>
+    <!-- チェックマーク -->
+    <path d="M25 45L30 50L35 45" stroke="#333" stroke-width="2" fill="none"/>
+</svg> 

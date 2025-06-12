@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 鉄筋のグリッド -->
+    <g stroke="#333" stroke-width="2">
+        <!-- 縦線 -->
+        <line x1="20" y1="20" x2="20" y2="60"/>
+        <line x1="40" y1="20" x2="40" y2="60"/>
+        <line x1="60" y1="20" x2="60" y2="60"/>
+        <!-- 横線 -->
+        <line x1="20" y1="20" x2="60" y2="20"/>
+        <line x1="20" y1="40" x2="60" y2="40"/>
+        <line x1="20" y1="60" x2="60" y2="60"/>
+    </g>
+    <!-- コンクリートの表現 -->
+    <rect x="15" y="15" width="50" height="50" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+    <!-- ハンマー -->
+    <path d="M65 30L75 20M65 30L55 40" stroke="#333" stroke-width="2"/>
+    <rect x="55" y="40" width="15" height="5" transform="rotate(45 55 40)" fill="#333"/>
+</svg> 
