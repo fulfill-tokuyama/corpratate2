@@ -666,15 +666,11 @@
     }
 
     .header-content {
-        height: 60px;
+        padding: 10px 0;
     }
 
-    .logo-en {
+    .logo h1 {
         font-size: 1.4rem;
-    }
-
-    .logo-jp {
-        font-size: 0.8rem;
     }
 
     .nav-list {
@@ -684,7 +680,7 @@
         left: 0;
         width: 100%;
         background-color: var(--white);
-        padding: 1rem 0;
+        padding: 20px 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -694,12 +690,8 @@
 
     .nav-list li {
         display: block;
-        margin: 1rem 0;
+        margin: 15px 0;
         text-align: center;
-    }
-
-    .header-contact {
-        display: none;
     }
 
     .hamburger {
@@ -713,61 +705,46 @@
     .hero-content {
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem 0;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
-    .hero-title .sub-title {
-        font-size: 1.4rem;
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .works-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 }
 
 /* Mobile (480px以下) */
 @media screen and (max-width: 480px) {
-    .section-title {
+    .hero-title {
         font-size: 2rem;
     }
 
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-title .sub-title {
-        font-size: 1.2rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
+    .hero-buttons {
+        flex-direction: column;
     }
 
     .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
     }
 
     .feature-item {
-        padding: 1.5rem;
+        padding: 20px;
     }
 
-    .work-info {
-        padding: 1rem;
-    }
-
-    .work-info h3 {
-        font-size: 1.1rem;
+    .section-title {
+        font-size: 1.5rem;
     }
 }
 
@@ -778,13 +755,12 @@
     }
 
     .nav-list,
-    .header-contact,
     .hamburger {
         display: none;
     }
 
     .hero {
-        padding-top: 2rem;
+        padding-top: 20px;
     }
 
     .btn {
