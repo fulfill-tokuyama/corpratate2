@@ -6,18 +6,25 @@
     <title>Hair Salon MIRAII | 大阪梅田の美容室</title>
     <meta name="description" content="大阪梅田駅徒歩5分の美容室。確かな技術とオーガニック薬剤で、あなたの髪を美しく。カット、カラー、パーマ、トリートメント、ヘッドスパまで。初回限定20%OFF。">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
     <meta property="og:title" content="Hair Salon MIRAII | 大阪梅田の美容室">
     <meta property="og:description" content="大阪梅田駅徒歩5分の美容室。確かな技術とオーガニック薬剤で、あなたの髪を美しく。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://example.com">
     <meta property="og:image" content="https://images.unsplash.com/photo-1594824476967-48c8b17427b1?auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- 構造化データ -->
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -41,29 +48,25 @@
     </script>
 </head>
 <body>
-    <!-- ヘッダー -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <h1>Hair Salon MIRAII<br>ヘアサロン ミライ</h1>
+                <a href="#home" class="logo">
+                    <h1>Hair Salon MIRAII<br><small>ヘアサロン ミライ</small></h1>
                 </a>
+                
                 <nav>
                     <ul class="nav-list">
                         <li><a href="#home">ホーム</a></li>
-                        <li><a href="#concept">コンセプト</a></li>
-                        <li><a href="#menu">メニュー</a></li>
-                        <li><a href="#stylists">スタイリスト</a></li>
-                        <li><a href="#salon">サロン情報</a></li>
+                        <li><a href="#features">コンセプト</a></li>
+                        <li><a href="#works">ヘアスタイル</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
                         <li><a href="#reservation" class="btn-reservation">ご予約</a></li>
                     </ul>
                 </nav>
-                <div class="header-contact">
-                    <p class="phone-number">06-1234-5678</p>
-                    <p class="business-hours">営業時間：平日 10:00-20:00 / 土日祝 9:00-19:00</p>
-                    <a href="#reservation" class="btn-web-reserve">WEB予約</a>
-                </div>
-                <button class="hamburger">
+                
+                <button class="hamburger" aria-label="メニューを開く">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -72,9 +75,9 @@
         </div>
     </header>
 
-    <!-- メインコンテンツ -->
+    <!-- Main Content -->
     <main>
-        <!-- ヒーローセクション -->
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -87,12 +90,12 @@
                         </p>
                         <div class="hero-buttons">
                             <a href="#reservation" class="btn btn-primary">ご予約はこちら</a>
-                            <a href="#menu" class="btn btn-secondary">初回限定クーポン</a>
+                            <a href="#features" class="btn btn-secondary">詳しく見る</a>
                         </div>
                     </div>
                     <div class="hero-image">
                         <img src="https://images.unsplash.com/photo-1594824476967-48c8b17427b1?auto=format&fit=crop&w=800&h=600&q=80" 
-                             alt="20代の日本人美容師" 
+                             alt="美容師がお客様の髪をカットしている様子" 
                              loading="lazy" 
                              width="800" 
                              height="600">
@@ -101,28 +104,34 @@
             </div>
         </section>
 
-        <!-- 3つの特徴 -->
+        <!-- Features Section -->
         <section id="features" class="features">
             <div class="container">
                 <h2 class="section-title">選ばれる3つの理由</h2>
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon">
-                            <img src="images/icons/technique.svg" alt="技術力アイコン">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                         </div>
                         <h3>確かな技術力</h3>
                         <p>スタイリスト全員が有資格者。最新のトレンドと確かな技術で、あなたの理想の髪型を実現します。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">
-                            <img src="images/icons/organic.svg" alt="オーガニックアイコン">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
                         </div>
                         <h3>髪に優しいこだわり</h3>
                         <p>オーガニック薬剤を使用し、髪と頭皮に優しい施術を心がけています。美しさと健康を両立させます。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">
-                            <img src="images/icons/private.svg" alt="プライベートアイコン">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                            </svg>
                         </div>
                         <h3>完全個室のプライベート空間</h3>
                         <p>リラックスして施術を受けていただけるよう、完全個室のプライベート空間をご用意しています。</p>
@@ -131,7 +140,7 @@
             </div>
         </section>
 
-        <!-- 施工事例をヘアカタログに変更 -->
+        <!-- Works Section -->
         <section id="works" class="works">
             <div class="container">
                 <h2 class="section-title">ヘアスタイル</h2>
@@ -457,7 +466,7 @@
         </section>
     </main>
 
-    <!-- フッター -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -498,6 +507,27 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // ハンバーガーメニューの制御
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
+            
+            hamburger.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // ナビゲーションリンクをクリックした時にメニューを閉じる
+            const navLinks = document.querySelectorAll('.nav-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navList.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

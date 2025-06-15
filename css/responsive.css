@@ -1,3 +1,252 @@
+/* ===== Responsive Design ===== */
+
+/* Tablet (768px以下) */
+@media screen and (max-width: 768px) {
+    /* Layout */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Header */
+    .header-content {
+        padding: var(--spacing-xs) 0;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo small {
+        font-size: 0.8rem;
+    }
+
+    .nav-list {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: var(--spacing-sm) 0;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Works */
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile (480px以下) */
+@media screen and (max-width: 480px) {
+    /* Layout */
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    /* Header */
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo small {
+        font-size: 0.7rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    /* Features */
+    .feature-item {
+        padding: var(--spacing-sm);
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Works */
+    .work-info {
+        padding: var(--spacing-sm);
+    }
+
+    .work-info h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Large screens (1200px以上) */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header {
+        position: static;
+        box-shadow: none;
+    }
+
+    .nav-list,
+    .hamburger {
+        display: none;
+    }
+
+    .hero {
+        padding-top: var(--spacing-sm);
+    }
+
+    .btn {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color) !important;
+        background: transparent !important;
+    }
+
+    .hero-image,
+    .work-image {
+        break-inside: avoid;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000000;
+        --secondary-color: #000000;
+        --text-color: #000000;
+        --bg-light: #FFFFFF;
+        --white: #FFFFFF;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #7A8B6F;
+        --secondary-color: #C19A7E;
+        --text-color: #E0E0E0;
+        --bg-light: #1A1A1A;
+        --white: #2A2A2A;
+        --border-color: #404040;
+    }
+
+    .hero-image img,
+    .work-image img {
+        filter: brightness(0.9);
+    }
+}
+
 /* ===== レスポンシブデザイン ===== */
 
 /* モバイルファーストのアプローチ */
@@ -155,30 +404,6 @@
     .hero-image img,
     .work-image img {
         image-rendering: -webkit-optimize-contrast;
-    }
-}
-
-/* スマートフォン（480px以下） */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 24px;
-    }
-    
-    .section-title {
-        font-size: 24px;
-    }
-    
-    .cta-title {
-        font-size: 24px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .btn {
-        width: 100%;
-        text-align: center;
     }
 }
 
